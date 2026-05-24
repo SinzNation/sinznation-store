@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #050505;
+  color: #f5f5f5;
+}
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.noise:before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .06;
+  background-image: radial-gradient(#fff 1px, transparent 1px);
+  background-size: 6px 6px;
+  z-index: 50;
+}
+.orb {
+  background: radial-gradient(circle, rgba(255,255,255,.22), rgba(255,255,255,.03) 45%, transparent 70%);
+  filter: blur(2px);
+}
+.card {
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.025));
+  backdrop-filter: blur(16px);
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-bold uppercase tracking-[.2em] transition;
+}
+.btn-primary { @apply bg-white text-black hover:bg-neutral-300; }
+.btn-secondary { @apply border border-white/20 bg-white/5 text-white hover:bg-white/10; }

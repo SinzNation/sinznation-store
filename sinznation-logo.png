@@ -1,0 +1,14 @@
+import Link from 'next/link';
+
+export default function CancelPage() {
+  return (
+    <main className="flex min-h-screen items-center justify-center bg-[#050505] px-6 text-white">
+      <div className="card max-w-xl rounded-[2.5rem] p-10 text-center">
+        <p className="text-sm uppercase tracking-[.3em] text-neutral-500">Checkout cancelled</p>
+        <h1 className="mt-4 font-display text-7xl tracking-wide">No Stress</h1>
+        <p className="mt-4 leading-7 text-neutral-300">Your payment was not completed. You can return to the product page anytime.</p>
+        <Link href="/product" className="btn btn-primary mt-8">Return To Product</Link>
+      </div>
+    </main>
+  );
+}
